@@ -5,10 +5,12 @@ description = ""
 authors = ["micferr <micfer96@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.11"
 networkx = "^2.6.3"
 jupyter = "^1.0.0"
 pandas = "^1.3.5"
+matplotlib = "^3.5.1"
+scipy = "^1.7.3"
 
 [tool.poetry.dev-dependencies]
 
