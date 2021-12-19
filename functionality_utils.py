@@ -34,6 +34,14 @@ def functionality_1():
 
     display(df)
 
+    def node_density(node):
+        d = len(graph.adjacents.get(node, {}))  # Out-degree
+        d += len([1 for n in graph.nodes if node in graph.adjacents.get(n, {})])  # In-degree
+        return d
+
+    densities = [node_density(node) for node in graph.nodes]
+    pd.DataFrame(densities).plot(kind='density')
+
 
 def functionality_2(on_graph: Optional[Graph] = None):
     """
